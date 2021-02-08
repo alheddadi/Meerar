@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+
+
+{% block title %} New Product {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="container-fluid pt-6 bg-secondary">
+
+    <div class="row">
+      <div class="col">
+        <div class="card shadow border-0">
+          <form action="" method="POST">
+            {% csrf_token %}
+        
+            {% for i in formt %}
+              
+            
+            
+            <div class='field'>
+              <label for="{{ i.id_for_label}}" class="label">{{i.html_name}}</label>
+              {{i}}
+          </div>
+          {% endfor %}
+          <input type="submit" name="Save">
+          </form>
+        </div>
+   
+       </div>
+    </div>
+</div>
+
+    
+
+  </div>
+   
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}
+<script>
+$('.nav-item a').removeClass('active');
+$('.home-item a').addClass('active');
+</script>
+{% endblock javascripts %}

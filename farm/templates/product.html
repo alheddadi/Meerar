@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block title %} product {% endblock title %}
+
+{% block content %}
+<link href="/static/css/style2.css" rel="stylesheet"/>
+<link href="/static/css/style.css" rel="stylesheet"/>
+        
+    <div class="container-fluid pt-6 bg-secondary">
+
+      <div class="row">
+        <div class="col">
+          <div class="card shadow border-0">
+            {% for i in xog %}
+            <img src="../../media/{{i.product_pic}}" class="" alt="product photo">
+            <span></span>
+            <div style = "font-family:courier">
+              
+                <center>
+               <div class="card" style="width:700px">
+                
+                <p>
+                    <div class="product-desc">
+                        <span class="product-title  font-weight-bold  mb-0">
+                            {{i.name}}
+                                <span class="badge">
+                                  New
+                                </span>
+                        </span>
+                        <span class="product-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star grey"></i>
+                              </span>
+                      </div>
+                    
+
+                </p>
+                <p class="h3 font-weight-bold  text-sm">
+                    <i class="fas fa-user-circle text-warning" class="text-nowrap" ></i>&nbsp;&nbsp;&nbsp;{{i.User__name}}
+              
+                  </p>
+              
+                <p class="h3 font-weight-bold  text-sm">
+                    
+                  <i class="fas fa-balance-scale text-warning" class="text-nowrap" ></i>&nbsp;&nbsp;&nbsp;{{i.amount}} --{{i.unit}}
+            
+                </p>
+                
+                <p class="h3 font-weight-bold  text-sm">
+                  <i class="fas fa-map-marker text-info" class="text-nowrap" ></i>&nbsp;&nbsp;&nbsp;{{i.User__magaalada__name}}  -{{i.User__gobolka__name}}
+            
+                </p>
+                <p class="h3 font-weight-bold  text-sm">
+                <i class="fas fa-phone-square text-success" class="text-nowrap"></i>&nbsp;&nbsp;&nbsp;    Phone number: {{i.User__Number}}
+                </p>
+                <p class="h3 font-weight-bold  text-sm">
+                  <i  class="text-nowrap"></i><a class="btn btn-sm btn-success" href="{% url 'maps'%}">View Map</a>
+                  
+                </p>
+                </div>
+                </center>
+               
+            {% endfor %}
+            </div>
+     
+          </div>
+        </div>
+      </div>
+    </div>
+    
+   
+
+{% endblock content %}
+

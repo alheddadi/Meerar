@@ -1,0 +1,158 @@
+{% extends 'base.html' %}
+
+
+
+{% block title %} About us {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body id="myPage">
+
+
+
+
+
+<!-- Team Container -->
+<div class="w3-container w3-padding-64 w3-center" id="team">
+<h2>OUR TEAM</h2>
+<p>Meet the team - our office mens:</p>
+
+<div class="w3-row"><br>
+
+<div class="w3-quarter">
+  <img src="/static/img/dev.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>suhayb abiib</h3>
+  <p>web  and mopile developmebt</p>
+</div>
+
+<div class="w3-quarter">
+  <img src="/static/img/dev.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>abdifatah ismail</h3>
+  <p>web and mopile development</p>
+</div>
+
+<div class="w3-quarter">
+  <img src="/static/img/dev.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Ayaan faysal</h3>
+  <p>web  and mopile desing</p>
+</div>
+
+<div class="w3-quarter">
+  <img src="/static/img/dev.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Mohamed Husein</h3>
+  <p>web  and mopile desing</p>
+</div>
+
+</div>
+</div>
+
+<!-- Work Row -->
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
+
+<div class="w3-quarter">
+<h2>Our Work</h2>
+<p>Mopile system are great growing factory so every bussiness needs mopile app to import there business<br>
+    This the mopile part of the system for easy usage and businessn improvement.</p>
+</div>
+
+<div class="w3-quarter">
+<div class="w3-card w3-white">
+  
+  <div class="w9-container">
+  <h3>system</h3>
+  <h4>Planning</h4>
+  <p>Desining</p>
+  <p>development</p>
+  <p>maintenace</p>
+  </div>
+  </div>
+</div>
+
+
+
+</div>
+<br>
+<br>
+
+<!-- Contact Container -->
+<div class="w3-container w3-padding-64 w3-theme-l5" id="contact">
+  <div class="w3-row">
+    <div class="w3-col m5">
+    <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">Contact Us</span></div>
+      <h3>Address</h3>
+      <p>Feel free to contact us.</p>
+      <p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i>Hargeida, somaliland</p>
+      <p><i class="fa fa-phone w3-text-teal w3-xlarge"></i>  +252 634014776</p>
+      <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>zuhaybb@gmail.com</p>
+    </div>
+    <div class="w3-col m7">
+      <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="/action_page.php" target="_blank">
+      <div class="w3-section">      
+        <label>Name</label>
+        <input class="w3-input" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">      
+        <label>Email</label>
+        <input class="w3-input" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">      
+        <label>Message</label>
+        <input class="w3-input" type="text" name="Message" required>
+      </div>  
+      <input class="w3-check" type="checkbox" checked name="Like">
+      <label>I Like it!</label>
+      <button type="submit" class="w3-button w3-right w3-theme">Send</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+// Script for side navigation
+function w3_open() {
+  var x = document.getElementById("mySidebar");
+  x.style.width = "300px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+
+// Close side navigation
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}
+<script>
+$('.nav-item a').removeClass('active');
+$('.home-item a').addClass('active');
+</script>
+{% endblock javascripts %}

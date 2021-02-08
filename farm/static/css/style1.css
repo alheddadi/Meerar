@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: #444;
+  background-color: #f2f2f2;
+}
+
+img {
+  width: 100%;
+  position: relative;
+  left: -38px;
+  display: block;
+  border-radius: inherit;
+}
+
+.card__container {
+    width: 320px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 2.5rem 2rem -2rem hsl(200 50% 20% / 40%);
+            box-shadow: 0 2.5rem 2rem -2rem hsl(200 50% 20% / 40%);
+    margin: 0 auto;
+    border-radius: 8px;
+    position: relative;
+    top: 30px;
+    margin-bottom: 60px;
+  }
+
+  .card__top__section {
+    background: -webkit-gradient(linear, left top, right top, from(#64c1ff), to(#0064b7));
+    background: -o-linear-gradient(left, #64c1ff, #0064b7);
+    background: linear-gradient(to right, #64c1ff, #0064b7);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    height: 410px;
+    width: 100%;
+    padding: 10px 0px 0px 0px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .card__top__section__icons > div {
+  width: 38px;
+  height: 38px;
+  background-color: #fff;
+  border-radius: 50%;
+  z-index: 100;
+  position: relative;
+  left: -48px;
+  margin-bottom: 10px;
+  display: table;
+  }
+
+  .card__top__section__icons > div > i {
+  vertical-align: middle;
+  text-align: center;
+  display: table-cell;
+  color: #454545;
+  font-size: 16px;
+  }
+
+  .card__body__section {
+    text-align: center;
+    padding: 8px 5px;
+  }
+
+  .card__body__section > p {
+    font-weight: 700;
+  }
+
+  .rating-section {
+  border-top: 1px solid #eee;
+  padding: 8px 12px;
+  margin-top: 5px;
+  display: table;
+  content: "";
+  clear: both;
+  width: 100%;
+  }
+
+  .rating-with-color {
+  color: #ffa500;
+  }
+
+  .stars-rating{
+  float: left;
+  }
+
+  .stars-rating > span {
+    font-size: small;
+  }
+
+  .c-price{
+  float: right;
+  }
+
+   @media screen and (max-width:       450px) {
+    .card__container {
+      width: 90% !important;
+      position: fixed !important;
+      left: 27px;
+    }
+  }

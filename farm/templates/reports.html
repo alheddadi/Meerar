@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<div class="row">
+    <div class="col">
+        <div class="card card-body">
+
+            <form method="get">
+               {{myFilter.form}}
+
+            <button class="btn btn-primary" type="submit">Search</button>
+          </form>
+
+        </div>
+    </div>
+    
+</div>
+<br>
+
+<div class="row">
+    <div class="col-md">
+		   
+        <div class="card card-body">
+			
+			 <div class="btn-group" >
+			  <a class="btn btn-sm btn-info"href="" >CSV</a>
+			  <button class="btn btn-sm btn-info">Excel</button>
+			  <button class="btn btn-sm btn-info">PDF</button>
+			</div>
+            </hr>
+            Last month
+            <table class="table table-sm">
+                <tr>
+                    <th>Product Name</th>
+                    <th>Quantity</th>
+                    <th>price</th>
+                    <th>Total</th>
+                    <th>Date</th>
+                    <th>Remove</th>
+                </tr>
+
+                {% for i in serveds %}
+
+                <tr>
+                    <td>{{i.Product__name}}</td>
+                    <td>{{i.amount}}</td>
+                    <td>{{i.price}}</td>
+                    <td>{{i.total}}</td>
+                    <td>{{i.Date}}</td>
+                   
+
+                    <td><a class="btn btn-sm btn-danger" href="">Delete</a></td>
+                </tr>
+                {% endfor %}
+                
+
+            </table>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total:700000sh
+        </br>
+    </br>
+            All time reports
+            <table class="table table-sm">
+                <tr>
+                    <th>Product Name</th>
+                    <th>Quantity</th>
+                    <th>price</th>
+                    <th>Total</th>
+                    <th>Date</th>
+                    <th>Remove</th>
+                </tr>
+
+                {% for i in serveds %}
+
+                <tr>
+                    <td>{{i.Product__name}}</td>
+                    <td>{{i.amount}}</td>
+                    <td>{{i.price}}</td>
+                    <td>{{i.total}}</td>
+                    <td>{{i.Date}}</td>
+                   
+
+                    <td><a class="btn btn-sm btn-danger" href="">Delete</a></td>
+                </tr>
+                {% endfor %}
+
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<link rel="stylesheet" type="text/css" href="/static/css/logincss.css">
+	<meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <title>
+    Som E-Farm| {% block title %} Register {% endblock %}
+  </title>
+
+  <!-- Favicon - loaded as static -->
+  <link href="{% static 'img/brand/favicon.ico' %}" rel="icon" type="image/png">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <!-- Icons -->
+  <script src="https://kit.fontawesome.com/189832a678.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<img class="wave" src="/static/img/wave.png">
+	<div class="container">
+		<div class="img">
+			<img src="/static/img/bg.svg">
+		</div>
+		<div class="login-content">
+			<form action="" method="POST">
+				<img src="/static/img/avatar.svg">
+				<br>
+                        <br>
+				{% csrf_token %}
+				{% for i in formset %}
+                    <div class='field'>
+                        <label for="{{ i.id_for_label}}" class="label">{{i.html_name}}</label>
+                        {{i}}
+                    </div>
+                    
+                    <hr>
+                {% endfor %}
+
+                <br>
+				<input type="submit" class="btn" value="Register">
+				<center><b><a href="{%url 'login' %}">Already have an acoount?</a></b></center>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

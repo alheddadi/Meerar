@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+	<link rel="stylesheet" type="text/css" href="/static/css/logincss.css">
+	<meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <title>
+    Som E-Farm| {% block title %} Login {% endblock %}
+  </title>
+
+  <!-- Favicon - loaded as static -->
+  <link href="{% static 'img/brand/favicon.ico' %}" rel="icon" type="image/png">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <!-- Icons -->
+  <script src="https://kit.fontawesome.com/189832a678.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<img class="wave" src="/static/img/wave.png">
+	<div class="container">
+		<div class="img">
+			<img src="/static/img/bg.svg">
+		</div>
+		<div  class="login-content">
+            <form method="POST" action="">
+                {% csrf_token %}
+				<img src="/static/img/avatar.svg">
+				<h2 class="title">Welcome</h2>
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="div">
+                        <input type="text" name="username" placeholder="Username..." class="form-control">  
+           		   </div>
+           		</div>
+           		<div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+                      <input type="text" name="password" placeholder="Password..." class="form-control">
+            	   </div>
+            	</div>
+            	<a href="#">Forgot Password?</a>
+				<input type="submit"  class="btn btn-outline-info  btn-sm btn-block" value="Login">
+				<center><b><a href="{% url 'register' %}">Create New Account?</a></b></center>
+				{% for message in messages %}
+					<p id="messages">{{message}}</p>
+				{% endfor %} 
+				
+			 
+			</form>
+		
+		</div>
+		
+    </div>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
